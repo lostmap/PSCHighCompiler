@@ -1,0 +1,5 @@
+CALL mark
+PUSH 0
+ASSERT
+mark:
+HALT

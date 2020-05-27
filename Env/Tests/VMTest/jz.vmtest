@@ -1,0 +1,6 @@
+PUSH 0
+JZ mark
+PUSH 0
+ASSERT
+mark:
+HALT
