@@ -41,3 +41,6 @@ Environment/TestApp/ConsoleApp2/bin
 Environment/TestApp/ConsoleApp2/obj
 **/bin
 **/obj
+**/x64
+**/Release
+**/Debug
