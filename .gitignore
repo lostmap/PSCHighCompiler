@@ -39,3 +39,5 @@ Environment/Compiler/SqlCompiler/SqlCompiler/bin
 Environment/Compiler/SqlCompiler/SqlCompiler/obj
 Environment/TestApp/ConsoleApp2/bin
 Environment/TestApp/ConsoleApp2/obj
+HighCompiler/bin
+HighCompiler/obj
