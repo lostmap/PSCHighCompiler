@@ -1,0 +1,12 @@
+C:\Users\Oleg\Documents\RPO\VirtualDll\Env\Compiler\Compiler\Compiler\bin\Release\netcoreapp3.1>Compiler.exe ../../../../../../../Tests/Example/test.psc 
+C:\Users\Oleg\Documents\RPO\VirtualDll\Env\Debugger\Debugger\x64\Release>Debugger.exe -v ../../../../Tests/Byte/push.bpsc
+
+
+//new
+//source -> byte
+C:\Users\Oleg\Documents\RPO\VirtualDll\Env\HighCompiler\HighCompiler\HighCompiler\bin\x64\Release\netcoreapp3.1 
+.\HighCompiler.exe ../../../../../../../Tests/Example/test.psc
+
+//byte -> vm
+C:\Users\Oleg\Documents\RPO\VirtualDll\Env\Debugger\Debugger\x64\Release
+.\Debugger.exe -v ../../../../Tests/CompilerTest/test.bpsc
