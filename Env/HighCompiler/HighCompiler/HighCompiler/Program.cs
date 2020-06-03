@@ -7,7 +7,7 @@ namespace PSCompiler
     {
         static void Main(string[] args)
         {
-            
+            /*
             if (args.Length == 0)
             {
                 throw new Exception("expected file name");
@@ -18,11 +18,11 @@ namespace PSCompiler
             {
                 throw new Exception("wrong file extension");
             }
-            
+            */
             try
             {
-                //string code = File.ReadAllText("C:/Users/Oleg/Documents/RPO/VirtualDll/Env/Tests/Example/test.psc");
-                string code = File.ReadAllText(args[0]);
+                string code = File.ReadAllText("C:/Users/Oleg/Documents/RPO/VirtualDll/Env/Tests/Example/test.psc");
+                //string code = File.ReadAllText(args[0]);
                 Parser parser = new Parser(code);
                 Node head = parser.Parse();
 

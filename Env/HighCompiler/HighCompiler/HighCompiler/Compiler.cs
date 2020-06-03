@@ -140,7 +140,7 @@ namespace PSCompiler
                     {
                         Gen(ByteCommand.FETCH);
                         Gen(((VarNode)node).GetName());
-                        Gen(ByteCommand.PRINT);
+                        //Gen(ByteCommand.PRINT);
                         break;
                     }
                 case NodeType.CONST:
