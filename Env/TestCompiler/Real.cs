@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestCompiler
 {
-    class Real : Token
+    public class Real : Token
     {
         public float value;
 

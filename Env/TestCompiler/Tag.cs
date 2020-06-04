@@ -6,7 +6,7 @@ namespace TestCompiler
 {
     public class Tag
     {
-        public static int
+        public const int
         AND = 256,
         BASIC = 257,
         BREAK = 258,

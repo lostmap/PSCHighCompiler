@@ -11,7 +11,7 @@ namespace TestCompiler
 
         public Node() { lexline = Lexer.line; }
 
-        void error(String s) { throw new Exception("near line " + lexline + ": " + s); }
+        public void error(String s) { throw new Exception("near line " + lexline + ": " + s); }
 
         static int labels = 0;
 

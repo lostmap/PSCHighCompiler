@@ -52,18 +52,18 @@ namespace TestCompiler
             }
             switch( peek )
             {
-            case '&':
-                if (readch('&')) return Word.and; else return new Token('&');
-            case '|':
-                 if (readch('|')) return Word.or; else return new Token('|');
-            case '=':
-                 if (readch('=')) return Word.eq; else return new Token('=');
-            case '!':
-                if (readch('=')) return Word.ne; else return new Token('!');
-            case '<':
-                if (readch('=')) return Word.le; else return new Token('<');
-            case '>':
-                if (readch('=')) return Word.ge; else return new Token('>');
+                case '&':
+                    if (readch('&')) return Word.and; else return new Token('&');
+                case '|':
+                     if (readch('|')) return Word.or; else return new Token('|');
+                case '=':
+                     if (readch('=')) return Word.eq; else return new Token('=');
+                case '!':
+                    if (readch('=')) return Word.ne; else return new Token('!');
+                case '<':
+                    if (readch('=')) return Word.le; else return new Token('<');
+                case '>':
+                    if (readch('=')) return Word.ge; else return new Token('>');
             }
             if (Char.IsDigit(peek))
             {

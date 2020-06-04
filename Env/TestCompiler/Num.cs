@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestCompiler
 {
-    class Num : Token
+    public class Num : Token
     {
         public int value;
 
