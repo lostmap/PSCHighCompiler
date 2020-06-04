@@ -8,7 +8,7 @@ namespace TestCompiler
     {
         public Or(Token tok, Expr x1, Expr x2) : base(tok, x1, x2) { }
 
-        public void jumping(int t, int f)
+        public override void jumping(int t, int f)
         {
             int label = t != 0 ? t : newlabel();
             expr1.jumping(label, 0);

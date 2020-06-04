@@ -13,7 +13,7 @@ namespace TestCompiler
             tag = t; 
         }
 
-        public String toString() 
+        public override String ToString() 
         {
             return "" + (char)tag;
         }

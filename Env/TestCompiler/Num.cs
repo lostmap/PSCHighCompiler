@@ -13,7 +13,7 @@ namespace TestCompiler
             value = v;
         }
 
-        public String toString() 
+        public override String ToString() 
         { 
             return "" + value; 
         }

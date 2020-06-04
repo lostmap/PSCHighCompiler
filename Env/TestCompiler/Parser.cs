@@ -26,8 +26,11 @@ namespace TestCompiler
         public void program()
         {   // program -> block
             Stmt s = block();
-            int begin = s.newlabel();  int after = s.newlabel();
-            s.emitlabel(begin); s.gen(begin, after); s.emitlabel(after);
+            int begin = s.newlabel();
+            int after = s.newlabel();
+            s.emitlabel(begin);
+            s.gen(begin, after);
+            s.emitlabel(after);
         }
 
         Stmt block()
@@ -126,7 +129,7 @@ namespace TestCompiler
             Stmt stmt; Token t = look;
             match(Tag.ID);
             Id id = top.get(t);
-            if (id == null) error(t.toString() + " undeclared");
+            if (id == null) error(t.ToString() + " undeclared");
 
             if (look.tag == '=')
             {       // S -> id = E ;
@@ -239,9 +242,9 @@ namespace TestCompiler
                     error("syntax error");
                     return x;
                 case Tag.ID:
-                    String s = look.toString();
+                    String s = look.ToString();
                     Id id = top.get(look);
-                    if (id == null) error(look.toString() + " undeclared");
+                    if (id == null) error(look.ToString() + " undeclared");
                     move();
                     if (look.tag != '[') return id;
                     else return offset(id);

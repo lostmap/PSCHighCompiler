@@ -15,8 +15,8 @@ namespace TestCompiler
             if (type == null) error("type error");
         }
 
-        public Expr gen() { return new Unary(op, expr.reduce()); }
+        public override Expr gen() { return new Unary(op, expr.reduce()); }
 
-        public String toString() { return op.toString() + " " + expr.toString(); }
+        public override String ToString() { return op.ToString() + " " + expr.ToString(); }
     }
 }

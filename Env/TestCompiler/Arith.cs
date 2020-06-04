@@ -15,14 +15,14 @@ namespace TestCompiler
             if (type == null) error("type error");
         }
 
-        public Expr gen()
+        public override Expr gen()
         {
             return new Arith(op, expr1.reduce(), expr2.reduce());
         }
 
-        public String toString()
+        public override String ToString()
         {
-            return expr1.toString() + " " + op.toString() + " " + expr2.toString();
+            return expr1.ToString() + " " + op.ToString() + " " + expr2.ToString();
         }
     }
 }

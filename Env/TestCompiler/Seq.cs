@@ -10,7 +10,7 @@ namespace TestCompiler
 
         public Seq(Stmt s1, Stmt s2) { stmt1 = s1; stmt2 = s2; }
 
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
             if (stmt1 == Stmt.Null) stmt2.gen(b, a);
             else if (stmt2 == Stmt.Null) stmt1.gen(b, a);

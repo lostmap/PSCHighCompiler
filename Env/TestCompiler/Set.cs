@@ -21,9 +21,9 @@ namespace TestCompiler
             else return null;
         }
 
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
-            emit(id.toString() + " = " + expr.gen().toString());
+            emit(id.ToString() + " = " + expr.gen().ToString());
         }
     }
 }

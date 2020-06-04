@@ -13,7 +13,7 @@ namespace TestCompiler
             stmt = Stmt.Enclosing;
         }
 
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
             emit("goto L" + stmt.after);
         }

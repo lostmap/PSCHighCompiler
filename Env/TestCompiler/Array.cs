@@ -12,6 +12,6 @@ namespace TestCompiler
         {
             size = sz; of = p;
         }
-        public String toString() { return "[" + size + "] " + of.toString(); }
+        public override String ToString() { return "[" + size + "] " + of.ToString(); }
     }
 }

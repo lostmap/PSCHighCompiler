@@ -21,21 +21,21 @@ namespace TestCompiler
             else return null;
         }
 
-        public Expr gen()
+        public override Expr gen()
         {
             int f = newlabel(); int a = newlabel();
             Temp temp = new Temp(type);
             this.jumping(0, f);
-            emit(temp.toString() + " = true");
+            emit(temp.ToString() + " = true");
             emit("goto L" + a);
-            emitlabel(f); emit(temp.toString() + " = false");
+            emitlabel(f); emit(temp.ToString() + " = false");
             emitlabel(a);
             return temp;
         }
 
-        public String toString()
+        public override String ToString()
         {
-            return expr1.toString() + " " + op.toString() + " " + expr2.toString();
+            return expr1.ToString() + " " + op.ToString() + " " + expr2.ToString();
         }
     }
 }

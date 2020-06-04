@@ -16,7 +16,7 @@ namespace TestCompiler
             if (expr.type != Type.Bool) expr.error("boolean required in do");
         }
 
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
             after = a;
             int label = newlabel();   // label for expr

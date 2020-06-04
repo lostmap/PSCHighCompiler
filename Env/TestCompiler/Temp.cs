@@ -11,6 +11,6 @@ namespace TestCompiler
 
         public Temp(Type p) : base(Word.temp, p) { number = ++count; }
 
-        public String toString() { return "t" + number; }
+        public override String ToString() { return "t" + number; }
     }
 }

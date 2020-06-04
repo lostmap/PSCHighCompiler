@@ -13,7 +13,7 @@ namespace TestCompiler
             lexeme = s;
         }
 
-        public String toString()
+        public override String ToString()
         { 
             return lexeme; 
         }

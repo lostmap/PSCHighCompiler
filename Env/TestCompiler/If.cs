@@ -14,7 +14,7 @@ namespace TestCompiler
             if (expr.type != Type.Bool) expr.error("boolean required in if");
         }
 
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
             int label = newlabel(); // label for the code for stmt
             expr.jumping(0, a);     // fall through on true, goto a on false

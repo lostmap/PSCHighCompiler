@@ -11,10 +11,10 @@ namespace TestCompiler
 
         public Expr(Token tok, Type p) { op = tok; type = p; }
 
-        public Expr gen() { return this; }
-        public Expr reduce() { return this; }
+        public virtual Expr gen() { return this; }
+        public virtual Expr reduce() { return this; }
 
-        public void jumping(int t, int f) { emitjumps(toString(), t, f); }
+        public virtual void jumping(int t, int f) { emitjumps(ToString(), t, f); }
 
         public void emitjumps(String test, int t, int f)
         {
@@ -25,8 +25,11 @@ namespace TestCompiler
             }
             else if (t != 0) emit("if " + test + " goto L" + t);
             else if (f != 0) emit("iffalse " + test + " goto L" + f);
-            else; // nothing since both t and f fall through
+            else
+            {
+                // nothing since both t and f fall through
+            }
         }
-        public String toString() { return op.toString(); }
+        public override String ToString() { return op.ToString(); }
     }
 }

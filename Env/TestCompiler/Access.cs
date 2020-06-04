@@ -14,13 +14,13 @@ namespace TestCompiler
             array = a; index = i;
         }
 
-        public Expr gen() { return new Access(array, index.reduce(), type); }
+        public override Expr gen() { return new Access(array, index.reduce(), type); }
 
-        public void jumping(int t, int f) { emitjumps(reduce().toString(), t, f); }
+        public override void jumping(int t, int f) { emitjumps(reduce().ToString(), t, f); }
 
-        public String toString()
+        public override String ToString()
         {
-            return array.toString() + " [ " + index.toString() + " ]";
+            return array.ToString() + " [ " + index.ToString() + " ]";
         }
     }
 }

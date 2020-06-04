@@ -13,7 +13,7 @@ namespace TestCompiler
             expr = x; stmt1 = s1; stmt2 = s2;
             if (expr.type != Type.Bool) expr.error("boolean required in if");
         }
-        public void gen(int b, int a)
+        public override void gen(int b, int a)
         {
             int label1 = newlabel();   // label1 for stmt1
             int label2 = newlabel();   // label2 for stmt2
