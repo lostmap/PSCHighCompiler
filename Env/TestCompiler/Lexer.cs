@@ -6,7 +6,7 @@ using System.Collections;
 namespace TestCompiler
 {
 
-    class Lexer
+    public class Lexer
     {
         public static int line = 1;
         char peek = ' ';
@@ -33,7 +33,7 @@ namespace TestCompiler
 
         void readch() 
         {
-            peek = (char) Console.In.Read();
+            peek = (char) Console.Read();
         }
         bool readch(char c)
         {

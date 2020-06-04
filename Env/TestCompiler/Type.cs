@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestCompiler
 {
-    class Type : Word
+    public class Type : Word
     {
         public int width = 0;          // width is used for storage allocation
 
