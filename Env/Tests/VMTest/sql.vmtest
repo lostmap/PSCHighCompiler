@@ -1,0 +1,4 @@
+NARG 0
+PUSH 5
+MULT
+HALT
