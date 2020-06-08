@@ -3,6 +3,7 @@
 namespace inter
 {
     using lexer;
+    using symbols;
 
     public class Node
     {

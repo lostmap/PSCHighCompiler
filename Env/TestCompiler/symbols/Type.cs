@@ -12,14 +12,15 @@
         }
 
         public static readonly Type
+        //Var   = new Type("var", Tag.BASIC, 1),
         Int   = new Type("int", Tag.BASIC, 4),
-        Float = new Type("float", Tag.BASIC, 8),
+        Double = new Type("double", Tag.BASIC, 8),
         Char  = new Type("char", Tag.BASIC, 1),
         Bool  = new Type("bool", Tag.BASIC, 1);
 
         public static bool numeric(Type p)
         {
-            if (p == Type.Char || p == Type.Int || p == Type.Float) return true;
+            if (p == Type.Char || p == Type.Int || p == Type.Double) return true;
             else return false;
         }
 
@@ -29,9 +30,9 @@
             {
                 return null;
             }
-            else if (p1 == Type.Float || p2 == Type.Float)
+            else if (p1 == Type.Double || p2 == Type.Double)
             {
-                return Type.Float;
+                return Type.Double;
             }
             else if (p1 == Type.Int || p2 == Type.Int)
             {

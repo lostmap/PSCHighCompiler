@@ -2,6 +2,7 @@
 {
     using lexer;
     using symbols;
+    using System.Diagnostics;
 
     public class Set : Stmt
     {
@@ -36,6 +37,10 @@
         public override void gen(int b, int a)
         {
             emit(id.ToString() + " = " + expr.gen().ToString());
+        }
+        public override void bytecode(Env currEnv)
+        { 
+             
         }
     }
 }

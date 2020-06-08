@@ -2,9 +2,9 @@
 {
     public class Real : Token
     {
-        public readonly float value;
+        public readonly double value;
 
-        public Real(float v) : base(Tag.REAL)
+        public Real(double v) : base(Tag.REAL)
         {
             value = v;
         }

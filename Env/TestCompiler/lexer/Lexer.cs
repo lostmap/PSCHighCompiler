@@ -37,7 +37,8 @@ namespace lexer
             reserve(Type.Int); 
             reserve(Type.Char);
             reserve(Type.Bool); 
-            reserve(Type.Float);
+            reserve(Type.Double);
+            //reserve(Type.Var);
         }
 
         internal virtual void readch() 
@@ -111,7 +112,7 @@ namespace lexer
                     return new Num(v);
                 }
 
-                float x = v; float d = 10;
+                double x = v; double d = 10;
                 for (;;)
                 {
                     readch();

@@ -22,6 +22,7 @@
         REAL    = 272,
         TEMP    = 273,
         TRUE    = 274,
-        WHILE   = 275;
+        WHILE   = 275,
+        VARIANT = 276;
     }
 }

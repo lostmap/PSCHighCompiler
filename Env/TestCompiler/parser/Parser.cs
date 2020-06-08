@@ -48,6 +48,7 @@ namespace parser
             int after = s.newlabel();
             s.emitlabel(begin);
             s.gen(begin, after);
+            s.bytecode(top);
             s.emitlabel(after);
         }
 
@@ -69,7 +70,7 @@ namespace parser
                 match(';');
                 Id id = new Id((Word)tok, p, used);
                 top.put(tok, id);
-                used = used + p.width;
+                used = used + p.width; // change later
             }
         }
 
@@ -309,7 +310,7 @@ namespace parser
                     move();
                     return x;
                 case Tag.REAL:
-                    x = new Constant(look, Type.Float);
+                    x = new Constant(look, Type.Double);
                     move();
                     return x;
                 case Tag.TRUE:

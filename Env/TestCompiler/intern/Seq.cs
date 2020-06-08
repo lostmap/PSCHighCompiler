@@ -1,4 +1,7 @@
-﻿namespace inter
+﻿using symbols;
+using System;
+
+namespace inter
 {
     public class Seq : Stmt
     {
@@ -27,6 +30,22 @@
                 stmt1.gen(b, label);
                 emitlabel(label);
                 stmt2.gen(label, a);
+            }
+        }
+
+        public override void bytecode(Env currEnv)
+        {
+            if (stmt1 == Stmt.Null)
+            {
+                stmt2.bytecode(currEnv);
+            }
+            else if (stmt2 == Stmt.Null)
+            {
+                stmt1.bytecode(currEnv);
+            }
+            else
+            {
+                //Console.Write("todo 2 stmt");
             }
         }
     }
